@@ -1,0 +1,12 @@
+<section *ngFor="let E of listEmploi">
+    <div   class="card" style="width: 18rem;">
+      <!--<img src=".../../assets/istockphoto-1257563298-612x612.jpg" class="card-img-top" alt="...">-->
+      <div class="card-body">
+        <h5 class="card-title"> {{E.title}}</h5>
+        <h5 > {{E.entreprise}}</h5>
+      
+        <button class="btn btn-primary"  [disabled]=" E.etat == false " > Postuler</button>
+        <button class="btn btn-primary" (click)= "Bilan(E)" > Bilan</button>
+      </div>
+    </div>
+  </section>
